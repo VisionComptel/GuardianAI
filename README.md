@@ -16,16 +16,22 @@
 
 ## 📁 Prepare Deployment Files
 
-### 3. Navigate to the GuardianAI Directory on D Drive
+### 3. Navigate to the Rockwell Software folder on D Drive
+        cd /mnt/d/SOFTWARES/ROCKWELL SOFTWARES
+
+### 4. Extract the GuardianAI installer .exe
+        7z x 1.04.00-FTA_GuardianAI-DVD.exe -o/mnt/d/GuardianAI/        
+
+### 5. Navigate to the GuardianAI Directory on D Drive
      cd /mnt/d/GuardianAI
 
-### 4. Create The Deployment Folder
+### 6. Create The Deployment Folder
      mkdir -p ~/deployment
 
-### 5. Copy project files from Windows(D-drive) to Deployment Folder
+### 7. Copy project files from Windows(D-drive) to Deployment Folder
      cp -r /mnt/d/GuardianAI/* ~/deployment/
 
-### 6. Verify copy
+### 8. Verify copy
     dir
 
 #### You should see the following files — this confirms the copy was successful:
@@ -44,25 +50,25 @@
      
 ## 🔧 Install Dependencies     
 
-### 7. Download latest package lists
+### 9. Download latest package lists
      sudo apt update
 
-### 8. Upgrade Installed Packages
+### 10. Upgrade Installed Packages
      sudo apt upgrade -y
 
 
 ##  🚀 Deploy GuardianAI
 
-### 9. Move to deployment folder
+### 11. Move to deployment folder
      cd ~/deployment
 
-### 10. Execute the following commands from /home/<user> directory to modify the permission to the installation scripts and enable
+### 12. Execute the following commands from /home/<user> directory to modify the permission to the installation scripts and enable
 execution 
 
         chown -R vc:vc deployment
         chmod 755 ./deployment/*.sh
 
-### 11. Execute the following command to install the FactoryTalk Analytics GuardianAI application
+### 13. Execute the following command to install the FactoryTalk Analytics GuardianAI application
 
   - Run the Installation Script
     
@@ -74,7 +80,10 @@ execution
 
 ## 🌐 Access the Application
 
-### 12. Find Your IP Address
+### 14. Find the Hostname 
+        hostname -f
+
+### 15. Find Your IP Address(if hostname not found)
     ip addr show eth0
 
    #### Example output:
@@ -88,11 +97,11 @@ execution
 
    - Note the inet address (e.g., 172.28.99.149) — this is your local IP.
 
-### 13. Open the Application
+### 16. Open the Application
 
-#### Navigate to the following URL in your browser:
+#### Navigate to the following URL in your browser(Example):
 
-    http://<your-inet-address>
+    http://172.28.99.149
 
    - You will be presented with the GuardianAI login page. Use the password you set during the installation step (-p argument).   
      
