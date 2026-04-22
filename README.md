@@ -1,9 +1,9 @@
-# GuardianAI
+# GuardianAI Installation Steps
 
 ## 🖥️ WSL Setup
 
 ### 1. Check if WSL is installed 
-    wsl --status
+    wsl -l -v
     
 #### Expected output:
     Default Distribution: Ubuntu-22.04
