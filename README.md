@@ -83,7 +83,7 @@ execution
 ### 14. Find the Hostname 
         hostname -f
 
-### 15. Find Your IP Address(if not done by Hostname)
+### 15. Find Your IP Address(if not access by Hostname)
     ip addr show eth0
 
    #### Example output:
